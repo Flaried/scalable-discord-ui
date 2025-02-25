@@ -1,6 +1,7 @@
+
 /* Set defaults to have the server list hidden */
 nav.wrapper_ef3116.guilds_c48ade {
-  opacity: 1;
+  opacity: 0;
   width: 72px;
   position: absolute;
   left: 0;
@@ -10,22 +11,44 @@ nav.wrapper_ef3116.guilds_c48ade {
 
 /* Move the main contents to the left*/
 .base_c48ade {
-  transition: margin-left 0.3s ease;
-  margin-left: 0;
+  transition:  opacity 0.5s ease, visibility 0.5s ease, margin-left 0.25s ease;
 }
 
-/* When the sidebar is hovered make server list visible */
-.container_c48ade:has(.sidebar_c48ade:hover) .wrapper_ef3116.guilds_c48ade {
-  opacity: 1;
-  visibility: visible;
-}
-/* When the sidebar is hovered move the main contents*/
-.container_c48ade:has(.sidebar_c48ade:hover) .base_c48ade {
+
+/* When the sidebar is hovered move the main contents */
+.container_c48ade:has(.container__2637a:hover) .base_c48ade {
   margin-left: 72px; 
 }
 
 /* Make sure the sidebar doesn't move when hovered on */
 .container_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .base_c48ade {
+  /* 
+    I like this effect of hiding the contents when in server list 
+    DELETE THIS OPACITY: 0; if you don't like the main contents going invisible
+  */
+
+  opacity: 0;
   margin-left: 72px; 
 }
 
+/* When the sidebar is hovered make server list visible 
+using container__2637a instead of sidebar_c48ade because it have a worse user experience for people trying to hit the settings button */
+.container_c48ade:has(.container__2637a:hover) nav.wrapper_ef3116.guilds_c48ade  {
+  opacity: 1;
+}
+
+
+
+/* When ther server list is hovered make it still visible */
+.container_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) nav.wrapper_ef3116.guilds_c48ade  {
+  opacity: 1;
+}
+
+/* if user is in dms */
+.container_c48ade:has(.privateChannels__35e86:hover) .base_c48ade  {
+  margin-left: 72px; 
+  opacity: 1;
+}
+.container_c48ade:has(.privateChannels__35e86:hover) nav.wrapper_ef3116.guilds_c48ade  {
+  opacity: 1;
+}
