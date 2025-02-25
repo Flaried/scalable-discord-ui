@@ -8,13 +8,13 @@ nav.wrapper_ef3116.guilds_c48ade {
   position: absolute;
   left: 0;
   height: 100vh; 
-  transition: opacity .05s ease-out;
+  transition: opacity .4s ease-out;
 
 }
 
 /* Move the main contents to the left*/
 .base_c48ade {
-  transition:  opacity 0.5s ease, margin-left 0.25s ease;
+  transition:  opacity 0.5s ease, margin-left 0.4s ease;
 }
 
 
