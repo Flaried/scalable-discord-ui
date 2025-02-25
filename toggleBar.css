@@ -1,0 +1,31 @@
+/* Set defaults to have the server list hidden */
+nav.wrapper_ef3116.guilds_c48ade {
+  opacity: 1;
+  width: 72px;
+  position: absolute;
+  left: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  height: 100vh; 
+}
+
+/* Move the main contents to the left*/
+.base_c48ade {
+  transition: margin-left 0.3s ease;
+  margin-left: 0;
+}
+
+/* When the sidebar is hovered make server list visible */
+.container_c48ade:has(.sidebar_c48ade:hover) .wrapper_ef3116.guilds_c48ade {
+  opacity: 1;
+  visibility: visible;
+}
+/* When the sidebar is hovered move the main contents*/
+.container_c48ade:has(.sidebar_c48ade:hover) .base_c48ade {
+  margin-left: 72px; 
+}
+
+/* Make sure the sidebar doesn't move when hovered on */
+.container_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .base_c48ade {
+  margin-left: 72px; 
+}
+
