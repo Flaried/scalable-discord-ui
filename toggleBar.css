@@ -5,7 +5,7 @@ NOTE: opacity of guilds should be the same or faster as margin left for c48ade, 
 nav.wrapper_ef3116.guilds_c48ade {
   opacity: 0;
   width: 72px;
-  position: absolute;
+  position: fixed;
   left: 0;
   height: 100vh; 
   transition: opacity .4s ease-out;
@@ -30,7 +30,7 @@ nav.wrapper_ef3116.guilds_c48ade {
     DELETE THIS OPACITY: 0; if you don't like the main contents going invisible
   */
 
-  opacity: 0;
+  /* opacity: 0; discord broke this css  */
   margin-left: 72px; 
 }
 
